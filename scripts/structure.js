@@ -64,51 +64,10 @@ class Operation {
 		return this.#right;
 	}
 }
-// class PlusOperation extends Operation {
-// 	/**
-// 	 *
-// 	 * @param {Operation | Number | null} left
-// 	 * @param {Operation | Number} right
-// 	 */
-// 	constructor(left, right) {
-// 		super(Operator.plus, left, right);
-// 	}
-// }
-// class MinusOperation extends Operation {
-// 	/**
-// 	 *
-// 	 * @param {Operation | Number | null} left
-// 	 * @param {Operation | Number} right
-// 	 */
-// 	constructor(left, right) {
-// 		super(Operator.minus, left, right);
-// 	}
-// }
-// class MultiplyOperation extends Operation {
-// 	/**
-// 	 *
-// 	 * @param {Operation | Number} left
-// 	 * @param {Operation | Number} right
-// 	 */
-// 	constructor(left, right) {
-// 		super(Operator.multiply, left, right);
-// 	}
-// }
-// class DivideOperation extends Operation {
-// 	/**
-// 	 *
-// 	 * @param {Operation | Number} left
-// 	 * @param {Operation | Number} right
-// 	 */
-// 	constructor(left, right) {
-// 		super(Operator.divide, left, right);
-// 	}
-// }
 //#endregion
 //#region Interpreter
 class Interpreter {
 	//#region tokenize()
-	/** @typedef {{ pattern: RegExp, type: TokenType }} Filter */
 	/**
 	 * 
 	 * @param {String} code 
@@ -118,7 +77,6 @@ class Interpreter {
 			[/[\+\-\*\/]/g, TokenType.operator],
 			[/\d+(\.\d+)?/g, TokenType.digit],
 			[/[\(\)]/g, TokenType.bracket],
-			// [/\S+/g, TokenType.unknown],
 		]);
 		const results = [];
 		for (const filter of filters) {
