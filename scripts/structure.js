@@ -25,11 +25,10 @@ class Token {
 	}
 	/**
 	 * 
-	 * @param {String} hint 
 	 * @returns 
 	 */
-	[Symbol.toPrimitive](hint) {
-		return hint == `string` ? `${this.#type}('${this.#value}')` : this;
+	toString() {
+		return `${this.#type}('${this.#value}')`;
 	}
 }
 //#endregion
