@@ -8,13 +8,14 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="../styles/style.css">
 	<link rel="stylesheet" href="../styles/themes/material.css">
+	<script src="../scripts/structure.js" defer></script>
 	<script src="../scripts/interpreter.js" defer></script>
 </head>
 
 <body style="position: fixed; inset: 0;">
 	<form id="interpreter" method="dialog" style="position: absolute; inset: 0; display: grid; grid: max-content 1fr / repeat(2, 1fr); gap: var(--size-gap); padding: var(--size-gap);">
 		<button id="run" type="submit" class="layer" style="grid-column: 1 / -1; width: fit-content; place-self: center;">Run</button>
-		<textarea id="input" placeholder="Input code" required autofocus class="layer">(1 + 2568) - (5 / (635 * 2))</textarea>
+		<textarea id="input" placeholder="Input code" required autofocus class="layer"></textarea>
 		<textarea id="output" placeholder="Wait for output" readonly class="layer"></textarea>
 	</form>
 </body>

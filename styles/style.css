@@ -2,10 +2,12 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 	user-select: none;
 	-webkit-user-drag: none;
 	border: none;
 	outline: none;
+	resize: none;
 }
 
 :root {
@@ -31,13 +33,13 @@ body {
 	display: flex;
 }
 
-img.icon {
-	height: var(--size-standart);
+img.avatar {
 	aspect-ratio: 1;
 }
 
-textarea {
-	resize: none;
+img.icon {
+	height: var(--size-standart);
+	aspect-ratio: 1;
 }
 
 hr {
@@ -45,7 +47,7 @@ hr {
 }
 
 code {
-	white-space: pre-line;
+	/* white-space: pre; */
 	tab-size: 4;
 	list-style: none inside;
 	counter-reset: index;
@@ -63,7 +65,7 @@ code>span {
 
 code>span::before {
 	counter-increment: index;
-	content: counters(index, '.', decimal) '	| ';
+	content: counters(index, '.', decimal) '	|';
 }
 
 ::-webkit-scrollbar {
